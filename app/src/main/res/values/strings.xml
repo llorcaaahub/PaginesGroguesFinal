@@ -15,6 +15,6 @@
         <item>Menjar Italià</item>
         <item>Menjar Oriental</item>
     </string-array>
-    <string name="triar_tipus_restaurants">Tria el teu tipus de restaurants:</string>
+    <string name="triar_tipus_restaurants">Tipus de restaurants:</string>
 
 </resources>
