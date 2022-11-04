@@ -3,6 +3,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
+    android:background="@color/material_on_surface_emphasis_medium"
     xmlns:tools="http://schemas.android.com/tools">
 
     <LinearLayout
@@ -13,9 +14,12 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textSize="20dp"
+
             android:text="@string/triar_tipus_restaurants" />
 
         <Spinner
+            android:scrollbarSize="30dp"
             android:id="@+id/spinner_tipus_restaurants"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
@@ -38,10 +42,10 @@
             android:text="aixo sera una img" />
 
         <TextView
-
             android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_marginLeft="50dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="60dp"
+            android:textSize="20dp"
             android:layout_marginTop="50dp"
             android:text="Nom Restaurant 1" />
     </LinearLayout>
