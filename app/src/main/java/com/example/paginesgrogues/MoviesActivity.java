@@ -1,4 +1,6 @@
 package com.example.paginesgrogues;
 
-public class MoviesActivity {
+import androidx.appcompat.app.AppCompatActivity;
+
+public class MoviesActivity extends AppCompatActivity {
 }

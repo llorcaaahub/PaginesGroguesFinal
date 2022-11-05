@@ -36,8 +36,8 @@ public class MainActivity extends AppCompatActivity {
 
         botoBusiness = findViewById(R.id.a1);
         botoRestaurant = findViewById(R.id.a2);
-        botoMovies = findViewById(R.id.b1);
-        botoWeather = findViewById(R.id.b2);
+        botoMovies = findViewById(R.id.b2);
+        botoWeather = findViewById(R.id.b1);
         botoHotels = findViewById(R.id.c1);
         botoKnowledge = findViewById(R.id.c2);
 
