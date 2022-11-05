@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:stretchColumns="1">
+
+        <LinearLayout
+            android:id="@+id/l1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="30dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:layout_marginLeft="10dp"
+                android:text="@string/pelis"
+                android:textSize="25dp" />
+
+
+        </LinearLayout>
+
+        <View
+            android:layout_height="1dp"
+            android:layout_marginTop="40dp"
+            android:background="#FF909090" />
+
+        <TableRow
+
+            android:layout_marginTop="40dp">
+
+            <ImageView
+                android:layout_width="170dp"
+                android:layout_height="120dp"
+                android:layout_column="0"
+                android:layout_marginLeft="15dp"
+                android:src="@drawable/movies"
+                android:text="esto es una foto" />
+
+            <TextView
+                android:layout_column="1"
+                android:layout_marginTop="25dp"
+                android:gravity="center"
+                android:text="Black Adam"
+                android:textSize="25dp" />
+
+        </TableRow>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp">
+
+            <TextView
+                android:layout_marginLeft="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Black Adam és una pel·lícula nord-americana de superherois basada en el personatge homònim de DC Comics. Produïda per DC Films, New Line Cinema, Seven Bucks Productions i FlynnPictureCo., i distribuïda per Warner Bros. Pictures, pretén ser una derivació de Shazam!"
+                android:textSize="18dp" />
+        </LinearLayout>
+
+        <LinearLayout>
+
+            <TextView
+                android:layout_marginLeft="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:text="HORARIS : ||19:30||
+20:00||
+||22:00||
+22:30||"
+                android:textSize="18dp" />
+        </LinearLayout>
+
+
+        <View
+            android:layout_height="1dp"
+            android:layout_marginTop="40dp"
+            android:background="#FF909090" />
+
+        <TableRow
+
+            android:layout_marginTop="40dp">
+
+            <ImageView
+                android:layout_width="170dp"
+                android:layout_height="120dp"
+                android:layout_column="0"
+                android:layout_marginLeft="15dp"
+                android:src="@drawable/movies"
+                android:text="esto es una foto" />
+
+            <TextView
+                android:layout_column="1"
+                android:layout_marginTop="25dp"
+                android:gravity="center"
+                android:text="El cuarto pasajero"
+                android:textSize="25dp" />
+
+        </TableRow>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:text="El quart passatger és una pel·lícula espanyola de comèdia dirigida per Alex de l'Església i protagonitzada per Blanca Suárez, Alberto San Juan, Ernesto Alterio i Rubén Cortada."
+                android:textSize="18dp" />
+
+
+        </LinearLayout>
+        <LinearLayout>
+
+            <TextView
+                android:layout_marginLeft="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:text="HORARIS : ||19:30||
+20:00||
+||22:00||
+22:30||"
+                android:textSize="18dp" />
+        </LinearLayout>
+
+        <View
+            android:layout_height="1dp"
+            android:layout_marginTop="40dp"
+            android:background="#FF909090" />
+
+        <TableRow
+
+            android:layout_marginTop="40dp">
+
+            <ImageView
+                android:layout_width="170dp"
+                android:layout_height="120dp"
+                android:layout_column="0"
+                android:layout_marginLeft="15dp"
+                android:src="@drawable/movies"
+                android:text="esto es una foto" />
+
+            <TextView
+                android:layout_column="1"
+                android:layout_marginTop="25dp"
+                android:gravity="center"
+                android:text="13 Exorcismos"
+                android:textSize="25dp" />
+
+        </TableRow>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Aixo sera un exemple de la descripcio
+        del restaurant bla bla bla bla bla bla bla bla bala bla
+        bla bla bla blai bla bla bla bla bls bla bla bla bla bla"
+                android:textSize="18dp" />
+
+
+        </LinearLayout>
+
+        <LinearLayout>
+
+            <TextView
+                android:layout_marginBottom="40dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:text="HORARIS : ||19:30||
+20:00||
+||22:00||
+22:30||"
+                android:textSize="18dp" />
+        </LinearLayout>
+
+
+
+    </TableLayout>
+</ScrollView>
+
+
+
+
+
+
+
+
+
+
+
+
