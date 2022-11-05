@@ -19,7 +19,7 @@ public class RestaurantsActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_restaurants);
 
-        String[] restaurants = { "India", "USA", "China", "Japan", "Other"};
+
 
 
 

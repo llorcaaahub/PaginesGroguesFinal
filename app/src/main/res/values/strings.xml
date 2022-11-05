@@ -16,5 +16,12 @@
         <item>Menjar Oriental</item>
     </string-array>
     <string name="triar_tipus_restaurants">Tipus de restaurants:</string>
+    <string-array name="tipus_de_bussines">
+    <item>--Tria tipus Empressa--</item>
+    <item>Empresa Electrica</item>
+    <item>EMpresa Tecnologica</item>
+    <item>Empresa automovilistica</item>
+    </string-array>
+    <string name="triar_tipus_sectors">Tipus de sectors:</string>
 
 </resources>
