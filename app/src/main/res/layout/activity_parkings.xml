@@ -8,6 +8,23 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:stretchColumns="1">
+        <LinearLayout
+            android:id="@+id/l1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="30dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:layout_marginLeft="10dp"
+                android:text="@string/parkings"
+                android:textSize="25dp" />
+
+
+        </LinearLayout>
 
         <TableRow
 
