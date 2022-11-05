@@ -3,10 +3,11 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/blaim/Desktop/DAM_2/M8/PaginesGroguesFinal/app/src/main/res/layout/activity_bussines.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/blaim/Desktop/DAM_2/M8/PaginesGroguesFinal/app/src/main/res/layout/activity_main.xml" value="0.25416666666666665" />
-        <entry key="..\:/Users/blaim/Desktop/DAM_2/M8/PaginesGroguesFinal/app/src/main/res/layout/activity_restaurants.xml" value="0.264" />
-        <entry key="..\:/Users/llorca/AndroidStudioProjects/PaginesGrogues/app/src/main/res/layout/activity_restaurants.xml" value="0.10989583333333333" />
+        <entry key="..\:/Users/blaim/Desktop/DAM_2/M8/PaginesGroguesFinal/app/src/main/res/layout/activity_restaurants.xml" value="0.22826086956521738" />
+        <entry key="..\:/Users/llorca/AndroidStudioProjects/PaginesGrogues/app/src/main/res/layout/activity_bussines.xml" value="0.2" />
+        <entry key="..\:/Users/llorca/AndroidStudioProjects/PaginesGrogues/app/src/main/res/layout/activity_main.xml" value="0.11955420466058764" />
+        <entry key="..\:/Users/llorca/AndroidStudioProjects/PaginesGrogues/app/src/main/res/layout/activity_restaurants.xml" value="0.264" />
         <entry key="..\:/Users/llorca/AndroidStudioProjects/PaginesGroguesFinal/PaginesGrogues/app/src/main/res/layout/activity_restaurants.xml" value="0.10989583333333333" />
       </map>
     </option>

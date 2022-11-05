@@ -18,6 +18,9 @@
             android:name=".RestaurantsActivity"
             android:exported="false" />
         <activity
+            android:name=".BussinesActivity"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true" >
             <intent-filter>
