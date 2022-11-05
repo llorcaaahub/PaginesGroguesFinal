@@ -3,6 +3,7 @@ package com.example.paginesgrogues;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.util.JsonReader;
 import android.widget.Spinner;
 
 
@@ -11,6 +12,11 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 
 import android.widget.Toast;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
 
 public class BussinesActivity extends AppCompatActivity {
     @Override
@@ -26,9 +32,32 @@ public class BussinesActivity extends AppCompatActivity {
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         // Apply the adapter to the spinner
         spinner.setAdapter(adapter);
+        String paraula = loadJSONFromAsset();
 
 
 
     }
+
+    public String loadJSONFromAsset() {
+        String json = null;
+        try {
+            BufferedReader reader = new BufferedReader(new InputStreamReader(getAssets().open("bussines.json")));
+            String paraula = "exemple";
+
+            // do reading, usually loop until end of file reading
+            String mLine;
+            while ((mLine = reader.readLine()) != null) {
+                //process line
+                mLine = mLine + ".";
+            }
+
+        } catch (IOException e) {
+            //log the exception
+        }
+
+        String paraula = "Exemple";
+        return paraula;
+    }
+
 }
 
