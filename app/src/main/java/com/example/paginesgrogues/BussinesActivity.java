@@ -1,21 +1,13 @@
 package com.example.paginesgrogues;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
-import android.util.JsonReader;
+import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 
-
-import android.view.View;
-import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
-
-import android.widget.Toast;
+import androidx.appcompat.app.AppCompatActivity;
 
 import java.io.BufferedReader;
 import java.io.IOException;
-import java.io.InputStream;
 import java.io.InputStreamReader;
 
 public class BussinesActivity extends AppCompatActivity {
@@ -32,7 +24,7 @@ public class BussinesActivity extends AppCompatActivity {
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         // Apply the adapter to the spinner
         spinner.setAdapter(adapter);
-        String paraula = loadJSONFromAsset();
+        //String paraula = loadJSONFromAsset();
 
 
 
