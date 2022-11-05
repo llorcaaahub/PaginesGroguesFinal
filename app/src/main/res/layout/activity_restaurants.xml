@@ -21,7 +21,6 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
                 android:text="@string/triar_tipus_restaurants"
-
                 android:textSize="20dp" />
 
             <Spinner
