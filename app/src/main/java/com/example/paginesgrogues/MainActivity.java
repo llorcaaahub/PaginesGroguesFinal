@@ -46,6 +46,14 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        botoParking.setOnClickListener(new View.OnClickListener() {
+            @Override
+            //Aquest es el boto de business
+            public void onClick(View view) {
+                goToEventsParkings(view);
+            }
+        });
+
     }
 
     public void goToEventsRestaurants(View view) {
