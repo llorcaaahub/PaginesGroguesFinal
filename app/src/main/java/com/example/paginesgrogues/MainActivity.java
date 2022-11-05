@@ -13,6 +13,7 @@ public class MainActivity extends AppCompatActivity {
     //Variables globals
     ImageView botoBusiness, botoRestaurant, botoMovies, botoParking, botoHotels, botoKnowledge;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
