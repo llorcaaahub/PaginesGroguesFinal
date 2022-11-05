@@ -2,7 +2,6 @@ package com.example.paginesgrogues;
 
 import android.os.Bundle;
 import android.widget.ArrayAdapter;
-import android.widget.Spinner;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -17,13 +16,13 @@ public class BussinesActivity extends AppCompatActivity {
         setContentView(R.layout.activity_bussines);
 
 
-        Spinner spinner = (Spinner) findViewById(R.id.spinner_tipus_bussines);
+        //Spinner spinner = (Spinner) findViewById(R.id.spinner_tipus_bussines);
         // Create an ArrayAdapter using the string array and a default spinner layout
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.tipus_de_bussines, android.R.layout.simple_spinner_item);
         // Specify the layout to use when the list of choices appears
-        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        //adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         // Apply the adapter to the spinner
-        spinner.setAdapter(adapter);
+        //spinner.setAdapter(adapter);
         //String paraula = loadJSONFromAsset();
 
 
