@@ -11,7 +11,7 @@ import androidx.appcompat.app.AppCompatActivity;
 public class MainActivity extends AppCompatActivity {
 
     //Variables globals
-    ImageView botoBusiness, botoRestaurant, botoMovies, botoWeather, botoHotels, botoKnowledge;
+    ImageView botoBusiness, botoRestaurant, botoMovies, botoWeather, botoHotels, botoParking;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,9 +22,9 @@ public class MainActivity extends AppCompatActivity {
         botoBusiness = findViewById(R.id.a1);
         botoRestaurant = findViewById(R.id.a2);
         botoMovies = findViewById(R.id.b1);
-        boto = findViewById(R.id.b2);
+        botoWeather = findViewById(R.id.b2);
         botoHotels = findViewById(R.id.c1);
-        botoKnowledge = findViewById(R.id.c2);
+        botoParking = findViewById(R.id.c2);
 
 
         botoRestaurant.setOnClickListener(new View.OnClickListener() {
