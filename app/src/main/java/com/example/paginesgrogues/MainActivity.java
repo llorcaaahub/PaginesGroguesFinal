@@ -40,12 +40,7 @@ public class MainActivity extends AppCompatActivity {
         botoWeather = findViewById(R.id.b2);
         botoHotels = findViewById(R.id.c1);
         botoKnowledge = findViewById(R.id.c2);
-        /*botoBusiness.setOnClickListener(this);
-        botoRestaurant.setOnClickListener(this);
-        botoMovies.setOnClickListener(this);
-        botoWeather.setOnClickListener(this);
-        botoHotels.setOnClickListener(this);
-        botoKnowledge.setOnClickListener(this);*/
+
 
         botoRestaurant.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -55,11 +50,27 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+
+        botoBusiness.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                goToEvents2(view);
+            }
+        });
+
     }
 
     public void goToEvents(View view) {
-            Intent intent = new Intent(this, RestaurantsActivity.class);
-            startActivity(intent);
+        Intent intent = new Intent(this, RestaurantsActivity.class);
+        startActivity(intent);
+        //Aqui declarem la funcio que inciara els events de cada clic i li posara un nom als imageViews/Botons
+
+    }
+
+    public void goToEvents2(View view) {
+        Intent intent = new Intent(this, BussinesActivity.class);
+        startActivity(intent);
         //Aqui declarem la funcio que inciara els events de cada clic i li posara un nom als imageViews/Botons
 
     }
