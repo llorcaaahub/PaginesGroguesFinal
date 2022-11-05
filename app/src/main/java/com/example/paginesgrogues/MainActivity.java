@@ -60,6 +60,14 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        botoMovies.setOnClickListener(new View.OnClickListener() {
+            @Override
+            //Aquest es el boto de movies
+            public void onClick(View view) {
+                goToEventsMovies(view);
+            }
+        });
+
     }
 
     public void goToEventsRestaurants(View view) {
@@ -71,6 +79,13 @@ public class MainActivity extends AppCompatActivity {
 
     public void goToEventsBussines(View view) {
         Intent intent = new Intent(this, BussinesActivity.class);
+        startActivity(intent);
+        //Aqui declarem la funcio que inciara els events de cada clic i li posara un nom als imageViews/Botons
+
+    }
+
+    public void goToEventsMovies(View view) {
+        Intent intent = new Intent(this, MoviesActivity.class);
         startActivity(intent);
         //Aqui declarem la funcio que inciara els events de cada clic i li posara un nom als imageViews/Botons
 
