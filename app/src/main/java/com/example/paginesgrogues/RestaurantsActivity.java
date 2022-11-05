@@ -13,7 +13,6 @@ import android.widget.ArrayAdapter;
 import android.widget.Toast;
 
 public class RestaurantsActivity extends AppCompatActivity {
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

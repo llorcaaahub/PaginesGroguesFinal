@@ -44,31 +44,32 @@ public class MainActivity extends AppCompatActivity {
 
         botoRestaurant.setOnClickListener(new View.OnClickListener() {
             @Override
+            //Aquest es el boto de restaurants
             public void onClick(View view) {
 
-                goToEvents(view);
+                goToEventsRestaurants(view);
             }
         });
 
 
         botoBusiness.setOnClickListener(new View.OnClickListener() {
             @Override
+            //Aquest es el boto de business
             public void onClick(View view) {
-
-                goToEvents2(view);
+                goToEventsBussines(view);
             }
         });
 
     }
 
-    public void goToEvents(View view) {
+    public void goToEventsRestaurants(View view) {
         Intent intent = new Intent(this, RestaurantsActivity.class);
         startActivity(intent);
         //Aqui declarem la funcio que inciara els events de cada clic i li posara un nom als imageViews/Botons
 
     }
 
-    public void goToEvents2(View view) {
+    public void goToEventsBussines(View view) {
         Intent intent = new Intent(this, BussinesActivity.class);
         startActivity(intent);
         //Aqui declarem la funcio que inciara els events de cada clic i li posara un nom als imageViews/Botons
