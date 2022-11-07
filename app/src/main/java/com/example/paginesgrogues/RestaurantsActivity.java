@@ -68,14 +68,14 @@ public class RestaurantsActivity extends AppCompatActivity {
             if(spinnerRestaurants.getSelectedItem().toString().equals("--Tria tipus Restaurants--")){
                 int contador = 1;
                 for(int i=0;i<exemple.length();i++){
-                    /*if(exemple.getJSONObject(i).get("tipurestaurant").equals("MenjarRapid")){
+                    if(exemple.getJSONObject(i).get("tipurestaurant").equals("MenjarRapid")){
                         switch(contador){
                             case 1:  t1.setText((CharSequence) exemple.getJSONObject(0).get("nomRestaurant"));contador++;break;
                             case 2:  t2.setText((CharSequence) exemple.getJSONObject(0).get("nomRestaurant"));contador++;break;
                             case 3:  t3.setText((CharSequence) exemple.getJSONObject(0).get("nomRestaurant"));contador++;break;
                             default: break;
                         }
-                    }*/
+                    }
                     //Aqui posarem el codi que fem servir
                 }
 
