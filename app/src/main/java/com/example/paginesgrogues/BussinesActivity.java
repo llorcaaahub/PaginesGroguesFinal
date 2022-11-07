@@ -68,6 +68,7 @@ public class BussinesActivity extends AppCompatActivity {
 
 
 
+
         String paraula = "Exemple";
         return paraula;
     }
