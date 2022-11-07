@@ -66,6 +66,7 @@
 
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:id="@+id/descripcio1"
                 android:text="Aixo sera un exemple de la descripcio
         del restaurant bla bla bla bla bla bla bla bla bala bla
         bla bla bla blai bla bla bla bla bls bla bla bla bla bla"
@@ -117,6 +118,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
+                android:id="@+id/descripcio2"
                 android:text="Aixo sera un exemple de la descripcio
         del restaurant bla bla bla bla bla bla bla bla bala bla
         bla bla bla blai bla bla bla bla bls bla bla bla bla bla"
@@ -168,6 +170,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
+                android:id="@+id/descripcio3"
                 android:text="Aixo sera un exemple de la descripcio
         del restaurant bla bla bla bla bla bla bla bla bala bla
         bla bla bla blai bla bla bla bla bls bla bla bla bla bla"
