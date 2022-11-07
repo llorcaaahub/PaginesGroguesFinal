@@ -52,9 +52,9 @@
 
         <ImageView
             android:id="@+id/b1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/knowledge" />
+            android:layout_width="115dp"
+            android:layout_height="106dp"
+            android:src="@drawable/parking" />
 
 
         <ImageView
