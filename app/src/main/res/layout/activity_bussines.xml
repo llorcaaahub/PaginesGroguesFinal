@@ -52,6 +52,7 @@
                 android:text="esto es una foto" />
 
             <TextView
+                android:id="@+id/t1"
                 android:layout_column="1"
                 android:layout_marginTop="25dp"
                 android:gravity="center"
