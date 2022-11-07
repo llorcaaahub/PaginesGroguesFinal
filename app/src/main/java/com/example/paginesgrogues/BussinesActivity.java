@@ -16,7 +16,8 @@ import java.io.InputStreamReader;
 
 public class BussinesActivity extends AppCompatActivity {
 
-    TextView t1;
+    TextView t1,t2,t3;
+    Spinner sp;
 
 
     @Override
@@ -25,7 +26,10 @@ public class BussinesActivity extends AppCompatActivity {
 
         setContentView(R.layout.activity_bussines);
 
-        t1 = findViewById(R.id.t1);
+        t1 = findViewById(R.id.titol1);
+        t2 = findViewById(R.id.titol2);
+        t3 = findViewById(R.id.titol3);
+        sp= findViewById(R.id.spinner_tipus_bussines);
 
         Spinner spinner = (Spinner) findViewById(R.id.spinner_tipus_bussines);
         // Create an ArrayAdapter using the string array and a default spinner layout
@@ -59,14 +63,18 @@ public class BussinesActivity extends AppCompatActivity {
             }
             JSONArray exemple = new JSONArray(sb.toString());
             String  numero = "ii";
+
+            switch (sp.getSelectedItem()){
+                //aqui posarem mels restaurants amb orde del seu tipus
+            }
             t1.setText((CharSequence) exemple.getJSONObject(0).get("nomEmpresa"));
+            t2.setText((CharSequence) exemple.getJSONObject(1).get("nomEmpresa"));
+            t3.setText((CharSequence) exemple.getJSONObject(2).get("nomEmpresa"));
 
         } catch (IOException | JSONException e) {
             //log the exception
 
         }
-
-
 
 
         String paraula = "Exemple";

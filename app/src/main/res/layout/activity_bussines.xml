@@ -52,7 +52,7 @@
                 android:text="esto es una foto" />
 
             <TextView
-                android:id="@+id/t1"
+                android:id="@+id/titol1"
                 android:layout_column="1"
                 android:layout_marginTop="25dp"
                 android:gravity="center"
@@ -105,6 +105,7 @@
                 android:text="esto es una foto" />
 
             <TextView
+                android:id="@+id/titol2"
                 android:layout_column="1"
                 android:layout_marginTop="25dp"
                 android:gravity="center"
@@ -157,6 +158,7 @@
                 android:text="esto es una foto" />
 
             <TextView
+                android:id="@+id/titol3"
                 android:layout_column="1"
                 android:layout_marginTop="25dp"
                 android:gravity="center"
