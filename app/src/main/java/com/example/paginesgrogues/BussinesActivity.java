@@ -64,8 +64,9 @@ public class BussinesActivity extends AppCompatActivity {
             JSONArray exemple = new JSONArray(sb.toString());
             String  numero = "ii";
 
-
-
+            switch (sp.getSelectedItem()){
+                //aqui posarem mels restaurants amb orde del seu tipus
+            }
             t1.setText((CharSequence) exemple.getJSONObject(0).get("nomEmpresa"));
             t2.setText((CharSequence) exemple.getJSONObject(1).get("nomEmpresa"));
             t3.setText((CharSequence) exemple.getJSONObject(2).get("nomEmpresa"));
