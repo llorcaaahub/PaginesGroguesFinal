@@ -63,6 +63,7 @@ public class BussinesActivity extends AppCompatActivity {
 
         } catch (IOException | JSONException e) {
             //log the exception
+
         }
 
 
