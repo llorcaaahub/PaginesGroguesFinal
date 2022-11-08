@@ -45,6 +45,7 @@
                 android:layout_height="120dp"
                 android:layout_column="0"
                 android:layout_marginLeft="15dp"
+                android:id="@+id/r1imatge"
                 android:src="@drawable/movies"
                 android:text="esto es una foto" />
 
@@ -53,7 +54,7 @@
                 android:layout_marginTop="25dp"
                 android:gravity="center"
                 android:text="NOM DEL REST"
-                android:id="@+id/titol1"
+                android:id="@+id/r1nomrestaurant"
                 android:textSize="25dp" />
 
         </TableRow>
@@ -67,10 +68,8 @@
 
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/descripcio1"
-                android:text="Aixo sera un exemple de la descripcio
-        del restaurant bla bla bla bla bla bla bla bla bala bla
-        bla bla bla blai bla bla bla bla bls bla bla bla bla bla"
+                android:id="@+id/r1descripcio"
+                android:text="Exemple de descripcio"
                 android:textSize="18dp" />
         </LinearLayout>
 
@@ -80,7 +79,19 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="15dp"
-                android:text="info del telefono i aquestes coses klkk"
+                android:id="@+id/r1linkpaginaweb"
+                android:text="Aqui anira el link de la pagina web"
+                android:textSize="18dp" />
+        </LinearLayout>
+
+        <LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:id="@+id/r1telefon"
+                android:text="Aqui anira el telefon del restaurant"
                 android:textSize="18dp" />
         </LinearLayout>
 
@@ -99,6 +110,7 @@
                 android:layout_height="120dp"
                 android:layout_column="0"
                 android:layout_marginLeft="15dp"
+                android:id="@+id/r2imatge"
                 android:src="@drawable/movies"
                 android:text="esto es una foto" />
 
@@ -107,7 +119,7 @@
                 android:layout_marginTop="25dp"
                 android:gravity="center"
                 android:text="NOM DEL REST"
-                android:id="@+id/titol2"
+                android:id="@+id/r2nomrestaurant"
                 android:textSize="25dp" />
 
         </TableRow>
@@ -120,10 +132,8 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:id="@+id/descripcio2"
-                android:text="Aixo sera un exemple de la descripcio
-        del restaurant bla bla bla bla bla bla bla bla bala bla
-        bla bla bla blai bla bla bla bla bls bla bla bla bla bla"
+                android:id="@+id/r2descripcio"
+                android:text="Exemple de descripcio"
                 android:textSize="18dp" />
 
 
@@ -134,7 +144,18 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="15dp"
-                android:text="info del telefono i aquestes coses klkk"
+                android:id="@+id/r2linkpaginaweb"
+                android:text="Aqui anira el link de la pagina web"
+                android:textSize="18dp" />
+        </LinearLayout>
+        <LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:id="@+id/r2telefon"
+                android:text="Aqui anira el telefon del restaurant"
                 android:textSize="18dp" />
         </LinearLayout>
 
@@ -152,7 +173,7 @@
                 android:layout_height="120dp"
                 android:layout_column="0"
                 android:layout_marginLeft="15dp"
-
+                android:id="@+id/r3imatge"
                 android:src="@drawable/movies"
                 android:text="esto es una foto" />
 
@@ -161,7 +182,7 @@
                 android:layout_marginTop="25dp"
                 android:gravity="center"
                 android:text="NOM DEL REST"
-                android:id="@id/titol3"
+                android:id="@+id/r3nomrestaurant"
                 android:textSize="25dp" />
 
         </TableRow>
@@ -174,10 +195,8 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:id="@+id/descripcio3"
-                android:text="Aixo sera un exemple de la descripcio
-        del restaurant bla bla bla bla bla bla bla bla bala bla
-        bla bla bla blai bla bla bla bla bls bla bla bla bla bla"
+                android:id="@+id/r3descripcio"
+                android:text="Exemple de descripcio"
                 android:textSize="18dp" />
 
 
@@ -189,7 +208,19 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="15dp"
-                android:text="info del telefono i aquestes coses klkk"
+                android:id="@+id/r3linkpaginaweb"
+                android:text="Aqui anira el link de la pagina web"
+                android:textSize="18dp" />
+        </LinearLayout>
+
+        <LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:id="@+id/r3telefon"
+                android:text="Aqui anira el telefon del restaurant"
                 android:textSize="18dp" />
         </LinearLayout>
 
