@@ -53,6 +53,7 @@
                 android:layout_marginTop="25dp"
                 android:gravity="center"
                 android:text="NOM DEL REST"
+                android:id="@+id/titol1"
                 android:textSize="25dp" />
 
         </TableRow>
@@ -106,6 +107,7 @@
                 android:layout_marginTop="25dp"
                 android:gravity="center"
                 android:text="NOM DEL REST"
+                android:id="@+id/titol2"
                 android:textSize="25dp" />
 
         </TableRow>
@@ -150,6 +152,7 @@
                 android:layout_height="120dp"
                 android:layout_column="0"
                 android:layout_marginLeft="15dp"
+
                 android:src="@drawable/movies"
                 android:text="esto es una foto" />
 
@@ -158,6 +161,7 @@
                 android:layout_marginTop="25dp"
                 android:gravity="center"
                 android:text="NOM DEL REST"
+                android:id="@id/titol3"
                 android:textSize="25dp" />
 
         </TableRow>

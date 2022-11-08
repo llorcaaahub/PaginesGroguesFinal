@@ -49,6 +49,7 @@ public class RestaurantsActivity extends AppCompatActivity {
 
     public String loadJSONFromAsset() {
         String json = null;
+        JSONArray exemple = null;
         try {
             BufferedReader reader = new BufferedReader(new InputStreamReader(getAssets().open("restaurants.json")));
 
@@ -62,17 +63,18 @@ public class RestaurantsActivity extends AppCompatActivity {
 
 
             }
-            JSONArray exemple = new JSONArray(sb.toString());
+            exemple = new JSONArray(sb.toString());
             String  numero = "ii";
-
+            String restauranttrobat;
             if(spinnerRestaurants.getSelectedItem().toString().equals("--Tria tipus Restaurants--")){
                 int contador = 1;
                 for(int i=0;i<exemple.length();i++){
+                    restauranttrobat = exemple.getJSONObject(i).get("tipurestaurant").toString();
                     if(exemple.getJSONObject(i).get("tipurestaurant").equals("MenjarRapid")){
                         switch(contador){
-                            case 1:  t1.setText((CharSequence) exemple.getJSONObject(0).get("nomRestaurant"));contador++;break;
-                            case 2:  t2.setText((CharSequence) exemple.getJSONObject(0).get("nomRestaurant"));contador++;break;
-                            case 3:  t3.setText((CharSequence) exemple.getJSONObject(0).get("nomRestaurant"));contador++;break;
+                            case 1:  t1.setText((CharSequence) exemple.getJSONObject(i).get("nomRestaurant").toString());contador++;break;
+                            case 2:  t2.setText((CharSequence) exemple.getJSONObject(i).get("nomRestaurant").toString());contador++;break;
+                            case 3:  t3.setText((CharSequence) exemple.getJSONObject(i).get("nomRestaurant").toString());contador++;break;
                             default: break;
                         }
                     }
