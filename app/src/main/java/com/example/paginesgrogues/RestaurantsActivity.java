@@ -176,7 +176,7 @@ public class RestaurantsActivity extends AppCompatActivity {
             //log the exception
 
         }
-        String exemple = "";
-        return exemple;
+        String retornar = "";
+        return retornar;
     }
 }
