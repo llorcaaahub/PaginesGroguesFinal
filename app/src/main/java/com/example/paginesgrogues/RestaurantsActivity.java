@@ -70,7 +70,7 @@ public class RestaurantsActivity extends AppCompatActivity {
 
     }
 
-    public String loadJSONFromAsset() {
+    public void loadJSONFromAsset() {
         String json = null;
         JSONArray exemple = null;
         try {
@@ -176,7 +176,6 @@ public class RestaurantsActivity extends AppCompatActivity {
             //log the exception
 
         }
-        String retornar = "";
-        return retornar;
+
     }
 }
