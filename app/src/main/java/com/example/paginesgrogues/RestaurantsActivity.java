@@ -17,16 +17,16 @@ import java.io.InputStreamReader;
 
 public class RestaurantsActivity extends AppCompatActivity {
 
-//Aqui estem declarant els tres noms de restaurants
-    TextView r1nomrestaurant,r2nomrestaurant,r3nomrestaurant;
+    //Aqui estem declarant els tres noms de restaurants
+    TextView r1nomrestaurant, r2nomrestaurant, r3nomrestaurant;
     //Aqui estem declarant les tres desciprcions dels restaurants
-    TextView r1descripcio,r2descripcio,r3descripcio;
+    TextView r1descripcio, r2descripcio, r3descripcio;
     //Aqui estem declarant les tres pagines webs dels restaurants
-    TextView r1linkpaginaweb,r2linkpaginaweb,r3linkpaginaweb;
+    TextView r1linkpaginaweb, r2linkpaginaweb, r3linkpaginaweb;
     //Aqui estem declarant els tres telefons dels restaurants
-    TextView r1telefon,r2telefon,r3telefon;
+    TextView r1telefon, r2telefon, r3telefon;
     //Aqui estem declarant les tres imatges dels restaurants
-    ImageView r1imatge,r2imatge,r3imatge;
+    ImageView r1imatge, r2imatge, r3imatge;
 
 
     Spinner spinnerRestaurants;
@@ -58,7 +58,6 @@ public class RestaurantsActivity extends AppCompatActivity {
         r3imatge = findViewById(R.id.r3imatge);
 
 
-
         spinnerRestaurants = (Spinner) findViewById(R.id.spinner_tipus_restaurants);
         // Create an ArrayAdapter using the string array and a default spinner layout
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.tipus_de_restaurant, android.R.layout.simple_spinner_item);
@@ -81,7 +80,7 @@ public class RestaurantsActivity extends AppCompatActivity {
             // do reading, usually loop until end of file reading
             StringBuilder sb = new StringBuilder();
             String mLine;
-            while ((mLine= reader.readLine()) != null) {
+            while ((mLine = reader.readLine()) != null) {
                 //process line
                 sb.append(mLine);
 
@@ -89,72 +88,95 @@ public class RestaurantsActivity extends AppCompatActivity {
             }
             exemple = new JSONArray(sb.toString());
             String nomimatge;
-            if(spinnerRestaurants.getSelectedItem().toString().equals("--Tria tipus Restaurants--")){
+            if (spinnerRestaurants.getSelectedItem().toString().equals("--Tria tipus Restaurants--")) {
                 int contador = 1;
-                for(int i=0;i<exemple.length();i++){
+                for (int i = 0; i < exemple.length(); i++) {
 
-                    if(exemple.getJSONObject(i).get("tipurestaurant").equals("MenjarRapid")){
-                        switch(contador){
+                    if (exemple.getJSONObject(i).get("tipurestaurant").equals("MenjarRapid")) {
+                        switch (contador) {
                             case 1:
                                 r1nomrestaurant.setText((CharSequence) exemple.getJSONObject(i).get("nomRestaurant").toString());
                                 r1descripcio.setText((CharSequence) exemple.getJSONObject(i).get("descripcio").toString());
                                 r1linkpaginaweb.setText((CharSequence) exemple.getJSONObject(i).get("linkpaginaweb").toString());
                                 r1telefon.setText((CharSequence) exemple.getJSONObject(i).get("telefon").toString());
 
-                                switch (exemple.getJSONObject(i).get("imatge").toString()){
-                                    case "./kfc":r1imatge.setImageResource(R.drawable.kfc);break;
-                                    case "./viena":r1imatge.setImageResource(R.drawable.viena);break;
-                                    case "./mcdonalds":r1imatge.setImageResource(R.drawable.mcdonalds);break;
-                                    case "./atarasii":r1imatge.setImageResource(R.drawable.atarasii);break;
-                                    default: break;
+                                switch (exemple.getJSONObject(i).get("imatge").toString()) {
+                                    case "./kfc":
+                                        r1imatge.setImageResource(R.drawable.kfc);
+                                        break;
+                                    case "./viena":
+                                        r1imatge.setImageResource(R.drawable.viena);
+                                        break;
+                                    case "./mcdonalds":
+                                        r1imatge.setImageResource(R.drawable.mcdonalds);
+                                        break;
+                                    case "./atarasii":
+                                        r1imatge.setImageResource(R.drawable.atarasii);
+                                        break;
+                                    case "./elitaliano":
+                                        r1imatge.setImageResource(R.drawable.elitaliano);
+                                        break;
+                                    default:
+                                        break;
                                 }
-                            contador++;
-                            break;
+                                contador++;
+                                break;
                             case 2:
                                 r2nomrestaurant.setText((CharSequence) exemple.getJSONObject(i).get("nomRestaurant").toString());
                                 r2descripcio.setText((CharSequence) exemple.getJSONObject(i).get("descripcio").toString());
                                 r2linkpaginaweb.setText((CharSequence) exemple.getJSONObject(i).get("linkpaginaweb").toString());
                                 r2telefon.setText((CharSequence) exemple.getJSONObject(i).get("telefon").toString());
-                                switch (exemple.getJSONObject(i).get("imatge").toString()){
-                                    case "./kfc":r2imatge.setImageResource(R.drawable.kfc);break;
-                                    case "./viena":r2imatge.setImageResource(R.drawable.viena);break;
-                                    case "./mcdonalds":r2imatge.setImageResource(R.drawable.mcdonalds);break;
-                                    default: break;
+                                switch (exemple.getJSONObject(i).get("imatge").toString()) {
+                                    case "./kfc":
+                                        r2imatge.setImageResource(R.drawable.kfc);
+                                        break;
+                                    case "./viena":
+                                        r2imatge.setImageResource(R.drawable.viena);
+                                        break;
+                                    case "./mcdonalds":
+                                        r2imatge.setImageResource(R.drawable.mcdonalds);
+                                        break;
+                                    default:
+                                        break;
                                 }
 
-                            contador++;
-                            break;
+                                contador++;
+                                break;
                             case 3:
                                 r3nomrestaurant.setText((CharSequence) exemple.getJSONObject(i).get("nomRestaurant").toString());
                                 r3descripcio.setText((CharSequence) exemple.getJSONObject(i).get("descripcio").toString());
                                 r3linkpaginaweb.setText((CharSequence) exemple.getJSONObject(i).get("linkpaginaweb").toString());
                                 r3telefon.setText((CharSequence) exemple.getJSONObject(i).get("telefon").toString());
                                 nomimatge = exemple.getJSONObject(i).get("imatge").toString();
-                                switch (nomimatge){
-                                    case "./kfc":r3imatge.setImageResource(R.drawable.kfc);break;
-                                    case "./viena":r3imatge.setImageResource(R.drawable.viena);break;
-                                    case "./mcdonalds":r3imatge.setImageResource(R.drawable.mcdonalds);break;
-                                    default: break;
+                                switch (nomimatge) {
+                                    case "./kfc":
+                                        r3imatge.setImageResource(R.drawable.kfc);
+                                        break;
+                                    case "./viena":
+                                        r3imatge.setImageResource(R.drawable.viena);
+                                        break;
+                                    case "./mcdonalds":
+                                        r3imatge.setImageResource(R.drawable.mcdonalds);
+                                        break;
+                                    default:
+                                        break;
                                 }
-                            contador++;
-                            break;
-                            default: break;
+                                contador++;
+                                break;
+                            default:
+                                break;
                         }
                     }
-                    //Aqui posarem el codi que fem servir
+
                 }
 
             }
-
-
 
         } catch (IOException | JSONException e) {
             //log the exception
 
         }
-
-
-        String paraula = "Exemple";
-        return paraula;
+        String exemple = "";
+        return exemple;
     }
 }
