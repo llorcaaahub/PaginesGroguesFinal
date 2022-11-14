@@ -69,7 +69,6 @@ public class RestaurantsActivity extends AppCompatActivity {
         loadJSONFromAsset();
 
 
-
     }
 
     public String loadJSONFromAsset() {
@@ -106,6 +105,7 @@ public class RestaurantsActivity extends AppCompatActivity {
                                     case "./kfc":r1imatge.setImageResource(R.drawable.kfc);break;
                                     case "./viena":r1imatge.setImageResource(R.drawable.viena);break;
                                     case "./mcdonalds":r1imatge.setImageResource(R.drawable.mcdonalds);break;
+                                    case "./atarasii":r1imatge.setImageResource(R.drawable.atarasii);break;
                                     default: break;
                                 }
                             contador++;
