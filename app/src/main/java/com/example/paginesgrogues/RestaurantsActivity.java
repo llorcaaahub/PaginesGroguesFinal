@@ -110,18 +110,6 @@ public class RestaurantsActivity extends AppCompatActivity {
                                     case "./mcdonalds":
                                         r1imatge.setImageResource(R.drawable.mcdonalds);
                                         break;
-                                    case "./atarasii":
-                                        r1imatge.setImageResource(R.drawable.atarasii);
-                                        break;
-                                    case "./elitaliano":
-                                        r1imatge.setImageResource(R.drawable.elitaliano);
-                                        break;
-                                    case "./ilsapore":
-                                        r1imatge.setImageResource(R.drawable.ilsapore);
-                                        break;
-                                    case "./kebabalnoor":
-                                        r1imatge.setImageResource(R.drawable.alnoor);
-                                        break;
                                     default:
                                         break;
                                 }
