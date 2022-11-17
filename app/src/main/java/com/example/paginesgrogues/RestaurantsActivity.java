@@ -29,6 +29,8 @@ public class RestaurantsActivity extends AppCompatActivity {
     ImageView r1imatge, r2imatge, r3imatge;
 
 
+
+
     Spinner spinnerRestaurants;
 
     @Override
@@ -71,7 +73,7 @@ public class RestaurantsActivity extends AppCompatActivity {
     }
 
     public void loadJSONFromAsset() {
-        String json = null;
+
         JSONArray exemple = null;
         try {
             BufferedReader reader = new BufferedReader(new InputStreamReader(getAssets().open("restaurants.json")));
@@ -87,84 +89,13 @@ public class RestaurantsActivity extends AppCompatActivity {
 
             }
             exemple = new JSONArray(sb.toString());
-            String nomimatge;
-            if (spinnerRestaurants.getSelectedItem().toString().equals("--Tria tipus Restaurants--")) {
-                int contador = 1;
-                for (int i = 0; i < exemple.length(); i++) {
-
-                    if (exemple.getJSONObject(i).get("tipurestaurant").equals("MenjarRapid")) {
-                        switch (contador) {
-                            case 1:
-                                r1nomrestaurant.setText((CharSequence) exemple.getJSONObject(i).get("nomRestaurant").toString());
-                                r1descripcio.setText((CharSequence) exemple.getJSONObject(i).get("descripcio").toString());
-                                r1linkpaginaweb.setText((CharSequence) exemple.getJSONObject(i).get("linkpaginaweb").toString());
-                                r1telefon.setText((CharSequence) exemple.getJSONObject(i).get("telefon").toString());
-
-                                switch (exemple.getJSONObject(i).get("imatge").toString()) {
-                                    case "./kfc":
-                                        r1imatge.setImageResource(R.drawable.kfc);
-                                        break;
-                                    case "./viena":
-                                        r1imatge.setImageResource(R.drawable.viena);
-                                        break;
-                                    case "./mcdonalds":
-                                        r1imatge.setImageResource(R.drawable.mcdonalds);
-                                        break;
-                                    default:
-                                        break;
-                                }
-                                contador++;
-                                break;
-                            case 2:
-                                r2nomrestaurant.setText((CharSequence) exemple.getJSONObject(i).get("nomRestaurant").toString());
-                                r2descripcio.setText((CharSequence) exemple.getJSONObject(i).get("descripcio").toString());
-                                r2linkpaginaweb.setText((CharSequence) exemple.getJSONObject(i).get("linkpaginaweb").toString());
-                                r2telefon.setText((CharSequence) exemple.getJSONObject(i).get("telefon").toString());
-                                switch (exemple.getJSONObject(i).get("imatge").toString()) {
-                                    case "./kfc":
-                                        r2imatge.setImageResource(R.drawable.kfc);
-                                        break;
-                                    case "./viena":
-                                        r2imatge.setImageResource(R.drawable.viena);
-                                        break;
-                                    case "./mcdonalds":
-                                        r2imatge.setImageResource(R.drawable.mcdonalds);
-                                        break;
-                                    default:
-                                        break;
-                                }
-
-                                contador++;
-                                break;
-                            case 3:
-                                r3nomrestaurant.setText((CharSequence) exemple.getJSONObject(i).get("nomRestaurant").toString());
-                                r3descripcio.setText((CharSequence) exemple.getJSONObject(i).get("descripcio").toString());
-                                r3linkpaginaweb.setText((CharSequence) exemple.getJSONObject(i).get("linkpaginaweb").toString());
-                                r3telefon.setText((CharSequence) exemple.getJSONObject(i).get("telefon").toString());
-                                nomimatge = exemple.getJSONObject(i).get("imatge").toString();
-                                switch (nomimatge) {
-                                    case "./kfc":
-                                        r3imatge.setImageResource(R.drawable.kfc);
-                                        break;
-                                    case "./viena":
-                                        r3imatge.setImageResource(R.drawable.viena);
-                                        break;
-                                    case "./mcdonalds":
-                                        r3imatge.setImageResource(R.drawable.mcdonalds);
-                                        break;
-                                    default:
-                                        break;
-                                }
-                                contador++;
-                                break;
-                            default:
-                                break;
-                        }
-                    }
-
-                }
-
+            String tipusrestaurantatriar;
+            tipusrestaurantatriar = spinnerRestaurants.getSelectedItem().toString();
+            if(tipusrestaurantatriar.equals("--Tria tipus Restaurants--")){
+                omplirimatges(exemple,tipusrestaurantatriar);
             }
+
+
 
         } catch (IOException | JSONException e) {
             //log the exception
@@ -172,4 +103,48 @@ public class RestaurantsActivity extends AppCompatActivity {
         }
 
     }
+
+    private void omplirimatges(JSONArray exemple, String tipusrestaurantatriar) throws JSONException {
+        int contador = 1;
+        for (int i = 0; i < exemple.length(); i++) {
+            //if(exemple.getJSONObject(i).get("tipurestaurant").equals(tipusrestaurantatriar)){
+            if(true){ //Aqui es a on haurem de posar el if de comparar el tipus de restaurant actual amb el tipus de restaurant triat
+                //Aqui tindrem el codi de afegir tots els valors al seu lloc corresponent directament
+                switch (contador){
+                    case 1: afegirprimerrestaurant(exemple,i);break;//Aqui afegirem al primer resturant
+                    case 2: afegirsegonrestaurant(exemple,i);break;//Aqui afegirem al segon restaurant
+                    case 3: afegirtercerrestaurant(exemple,i);break;//Aqui afegirem al tercer restaurant
+                    default: break;
+                }
+                contador++;
+
+            }
+        }
+
+    }
+
+    private void afegirprimerrestaurant(JSONArray exemple, int posicio) throws JSONException {
+        r1nomrestaurant.setText(exemple.getJSONObject(posicio).get("nomRestaurant").toString());
+        r1descripcio.setText(exemple.getJSONObject(posicio).get("descripcio").toString());
+        r1linkpaginaweb.setText(exemple.getJSONObject(posicio).get("linkpaginaweb").toString());
+        r1telefon.setText(exemple.getJSONObject(posicio).get("telefon").toString());
+        r1imatge.setImageResource(Integer.parseInt(exemple.getJSONObject(posicio).get("imatge").toString()));
+    }
+
+    private void afegirsegonrestaurant(JSONArray exemple, int posicio) throws JSONException {
+        r2nomrestaurant.setText(exemple.getJSONObject(posicio).get("nomRestaurant").toString());
+        r2descripcio.setText(exemple.getJSONObject(posicio).get("descripcio").toString());
+        r2linkpaginaweb.setText(exemple.getJSONObject(posicio).get("linkpaginaweb").toString());
+        r2telefon.setText(exemple.getJSONObject(posicio).get("telefon").toString());
+        r2imatge.setImageResource(Integer.parseInt(exemple.getJSONObject(posicio).get("imatge").toString()));
+    }
+
+    private void afegirtercerrestaurant(JSONArray exemple, int posicio) throws JSONException {
+        r3nomrestaurant.setText(exemple.getJSONObject(posicio).get("nomRestaurant").toString());
+        r3descripcio.setText(exemple.getJSONObject(posicio).get("descripcio").toString());
+        r3linkpaginaweb.setText(exemple.getJSONObject(posicio).get("linkpaginaweb").toString());
+        r3telefon.setText(exemple.getJSONObject(posicio).get("telefon").toString());
+        r3imatge.setImageResource(Integer.parseInt(exemple.getJSONObject(posicio).get("imatge").toString()));
+    }
+
 }
