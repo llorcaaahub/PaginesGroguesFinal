@@ -1,6 +1,8 @@
 package com.example.paginesgrogues;
 
 import android.os.Bundle;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.Spinner;
@@ -59,7 +61,6 @@ public class RestaurantsActivity extends AppCompatActivity {
         r2imatge = findViewById(R.id.r2imatge);
         r3imatge = findViewById(R.id.r3imatge);
 
-
         spinnerRestaurants = (Spinner) findViewById(R.id.spinner_tipus_restaurants);
         // Create an ArrayAdapter using the string array and a default spinner layout
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.tipus_de_restaurant, android.R.layout.simple_spinner_item);
@@ -67,48 +68,49 @@ public class RestaurantsActivity extends AppCompatActivity {
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         // Apply the adapter to the spinner
         spinnerRestaurants.setAdapter(adapter);
-        loadJSONFromAsset();
 
-
+        spinnerRestaurants.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                loadJSONFromAsset();
+            }
+            @Override
+            public void onNothingSelected(AdapterView<?> parentView) {
+                // Aqui de moment no posarem res
+                //UPDATE: SI NO POSEM RES EL ADAPTERVIEW ES QUEIXA
+            }
+        });
     }
 
     public void loadJSONFromAsset() {
 
-        JSONArray exemple = null;
+        JSONArray exemple;
         try {
             BufferedReader reader = new BufferedReader(new InputStreamReader(getAssets().open("restaurants.json")));
 
-
-            // do reading, usually loop until end of file reading
             StringBuilder sb = new StringBuilder();
             String mLine;
             while ((mLine = reader.readLine()) != null) {
                 //process line
                 sb.append(mLine);
-
-
             }
+
             exemple = new JSONArray(sb.toString());
             String tipusrestaurantatriar;
             tipusrestaurantatriar = spinnerRestaurants.getSelectedItem().toString();
-            if(tipusrestaurantatriar.equals("--Tria tipus Restaurants--")){
+            if(!tipusrestaurantatriar.equals("--Tria tipus Restaurants--")){
                 omplirimatges(exemple,tipusrestaurantatriar);
             }
-
-
-
         } catch (IOException | JSONException e) {
             //log the exception
-
         }
-
     }
 
     private void omplirimatges(JSONArray exemple, String tipusrestaurantatriar) throws JSONException {
         int contador = 1;
         for (int i = 0; i < exemple.length(); i++) {
             //if(exemple.getJSONObject(i).get("tipurestaurant").equals(tipusrestaurantatriar)){
-            if(true){ //Aqui es a on haurem de posar el if de comparar el tipus de restaurant actual amb el tipus de restaurant triat
+            if(exemple.getJSONObject(i).get("tipurestaurant").toString().equals(spinnerRestaurants.getSelectedItem().toString())){ //Aqui es a on haurem de posar el if de comparar el tipus de restaurant actual amb el tipus de restaurant triat
                 //Aqui tindrem el codi de afegir tots els valors al seu lloc corresponent directament
                 switch (contador){
                     case 1: afegirprimerrestaurant(exemple,i);break;//Aqui afegirem al primer resturant
@@ -117,34 +119,50 @@ public class RestaurantsActivity extends AppCompatActivity {
                     default: break;
                 }
                 contador++;
-
             }
         }
-
     }
 
     private void afegirprimerrestaurant(JSONArray exemple, int posicio) throws JSONException {
-        r1nomrestaurant.setText(exemple.getJSONObject(posicio).get("nomRestaurant").toString());
-        r1descripcio.setText(exemple.getJSONObject(posicio).get("descripcio").toString());
-        r1linkpaginaweb.setText(exemple.getJSONObject(posicio).get("linkpaginaweb").toString());
-        r1telefon.setText(exemple.getJSONObject(posicio).get("telefon").toString());
-        r1imatge.setImageResource(Integer.parseInt(exemple.getJSONObject(posicio).get("imatge").toString()));
+        String nomrestaurant = exemple.getJSONObject(posicio).get("nomRestaurant").toString();
+        r1nomrestaurant.setText(nomrestaurant);
+        String descripciorestaurant = exemple.getJSONObject(posicio).get("descripcio").toString();
+        r1descripcio.setText(descripciorestaurant);
+        String linkpaginawebrestaurant = exemple.getJSONObject(posicio).get("linkpaginaweb").toString();
+        r1linkpaginaweb.setText(linkpaginawebrestaurant);
+        String telefonRestaurant = exemple.getJSONObject(posicio).get("telefon").toString();
+        r1telefon.setText(telefonRestaurant);
+        String imatgerestaurant = exemple.getJSONObject(posicio).get("imatge").toString();
+        int resID = getResources().getIdentifier(imatgerestaurant , "drawable", getPackageName());
+        r1imatge.setImageResource(resID);
     }
 
     private void afegirsegonrestaurant(JSONArray exemple, int posicio) throws JSONException {
-        r2nomrestaurant.setText(exemple.getJSONObject(posicio).get("nomRestaurant").toString());
-        r2descripcio.setText(exemple.getJSONObject(posicio).get("descripcio").toString());
-        r2linkpaginaweb.setText(exemple.getJSONObject(posicio).get("linkpaginaweb").toString());
-        r2telefon.setText(exemple.getJSONObject(posicio).get("telefon").toString());
-        r2imatge.setImageResource(Integer.parseInt(exemple.getJSONObject(posicio).get("imatge").toString()));
+        String nomrestaurant = exemple.getJSONObject(posicio).get("nomRestaurant").toString();
+        r2nomrestaurant.setText(nomrestaurant);
+        String descripciorestaurant = exemple.getJSONObject(posicio).get("descripcio").toString();
+        r2descripcio.setText(descripciorestaurant);
+        String linkpaginawebrestaurant = exemple.getJSONObject(posicio).get("linkpaginaweb").toString();
+        r2linkpaginaweb.setText(linkpaginawebrestaurant);
+        String telefonRestaurant = exemple.getJSONObject(posicio).get("telefon").toString();
+        r2telefon.setText(telefonRestaurant);
+        String imatgerestaurant = exemple.getJSONObject(posicio).get("imatge").toString();
+        int resID = getResources().getIdentifier(imatgerestaurant , "drawable", getPackageName());
+        r2imatge.setImageResource(resID);
     }
 
     private void afegirtercerrestaurant(JSONArray exemple, int posicio) throws JSONException {
-        r3nomrestaurant.setText(exemple.getJSONObject(posicio).get("nomRestaurant").toString());
-        r3descripcio.setText(exemple.getJSONObject(posicio).get("descripcio").toString());
-        r3linkpaginaweb.setText(exemple.getJSONObject(posicio).get("linkpaginaweb").toString());
-        r3telefon.setText(exemple.getJSONObject(posicio).get("telefon").toString());
-        r3imatge.setImageResource(Integer.parseInt(exemple.getJSONObject(posicio).get("imatge").toString()));
+        String nomrestaurant = exemple.getJSONObject(posicio).get("nomRestaurant").toString();
+        r3nomrestaurant.setText(nomrestaurant);
+        String descripciorestaurant = exemple.getJSONObject(posicio).get("descripcio").toString();
+        r3descripcio.setText(descripciorestaurant);
+        String linkpaginawebrestaurant = exemple.getJSONObject(posicio).get("linkpaginaweb").toString();
+        r3linkpaginaweb.setText(linkpaginawebrestaurant);
+        String telefonRestaurant = exemple.getJSONObject(posicio).get("telefon").toString();
+        r3telefon.setText(telefonRestaurant);
+        String imatgerestaurant = exemple.getJSONObject(posicio).get("imatge").toString();
+        int resID = getResources().getIdentifier(imatgerestaurant , "drawable", getPackageName());
+        r3imatge.setImageResource(resID);
     }
 
 }

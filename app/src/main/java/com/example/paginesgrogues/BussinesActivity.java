@@ -55,7 +55,7 @@ public class BussinesActivity extends AppCompatActivity {
 
     }
 
-    public String loadJSONFromAsset() {
+    public void loadJSONFromAsset() {
         String json = null;
         JSONArray exemple = null;
 
@@ -140,7 +140,6 @@ public class BussinesActivity extends AppCompatActivity {
 
 
         String paraula = "Exemple";
-        return paraula;
     }
 
 }
