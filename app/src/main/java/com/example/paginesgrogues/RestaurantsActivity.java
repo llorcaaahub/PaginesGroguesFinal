@@ -29,10 +29,7 @@ public class RestaurantsActivity extends AppCompatActivity {
     TextView r1telefon, r2telefon, r3telefon;
     //Aqui estem declarant les tres imatges dels restaurants
     ImageView r1imatge, r2imatge, r3imatge;
-
-
-
-
+    //Aqui estem declarant el spinner
     Spinner spinnerRestaurants;
 
     @Override
@@ -61,17 +58,18 @@ public class RestaurantsActivity extends AppCompatActivity {
         r2imatge = findViewById(R.id.r2imatge);
         r3imatge = findViewById(R.id.r3imatge);
 
+        //Aqui li diem que el spinner que hem creat abans es el spinner que esta al xml
         spinnerRestaurants = (Spinner) findViewById(R.id.spinner_tipus_restaurants);
-        // Create an ArrayAdapter using the string array and a default spinner layout
+        //Aqui li posem valor al spinner, a aixi tindrem la llista de desplegables de restaurants
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.tipus_de_restaurant, android.R.layout.simple_spinner_item);
-        // Specify the layout to use when the list of choices appears
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        // Apply the adapter to the spinner
         spinnerRestaurants.setAdapter(adapter);
 
+        //Aqui estem declarant el event per detectar quan hi ha canvi en el index triat del spinner
         spinnerRestaurants.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                //Cada cop que el index de spinner canvia, entrara aqui dins
                 loadJSONFromAsset();
             }
             @Override
@@ -83,7 +81,6 @@ public class RestaurantsActivity extends AppCompatActivity {
     }
 
     public void loadJSONFromAsset() {
-
         JSONArray exemple;
         try {
             BufferedReader reader = new BufferedReader(new InputStreamReader(getAssets().open("restaurants.json")));
@@ -99,18 +96,21 @@ public class RestaurantsActivity extends AppCompatActivity {
             String tipusrestaurantatriar;
             tipusrestaurantatriar = spinnerRestaurants.getSelectedItem().toString();
             if(!tipusrestaurantatriar.equals("--Tria tipus Restaurants--")){
-                omplirimatges(exemple,tipusrestaurantatriar);
+                omplirvalors(exemple,tipusrestaurantatriar);
+            }else{
+                //Aqui podriem fer que si no te cap restaurant triat no es mostri res
+                //contentView.setVisibility(View.GONE) //MAYBE ES AIXO
             }
         } catch (IOException | JSONException e) {
             //log the exception
         }
     }
 
-    private void omplirimatges(JSONArray exemple, String tipusrestaurantatriar) throws JSONException {
+    private void omplirvalors(JSONArray exemple, String tipusrestaurantatriar) throws JSONException {
         int contador = 1;
         for (int i = 0; i < exemple.length(); i++) {
             //if(exemple.getJSONObject(i).get("tipurestaurant").equals(tipusrestaurantatriar)){
-            if(exemple.getJSONObject(i).get("tipurestaurant").toString().equals(spinnerRestaurants.getSelectedItem().toString())){ //Aqui es a on haurem de posar el if de comparar el tipus de restaurant actual amb el tipus de restaurant triat
+            if(exemple.getJSONObject(i).get("tipurestaurant").toString().equals(tipusrestaurantatriar)){ //Aqui es a on haurem de posar el if de comparar el tipus de restaurant actual amb el tipus de restaurant triat
                 //Aqui tindrem el codi de afegir tots els valors al seu lloc corresponent directament
                 switch (contador){
                     case 1: afegirprimerrestaurant(exemple,i);break;//Aqui afegirem al primer resturant
