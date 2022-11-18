@@ -26,30 +26,44 @@
 
         </LinearLayout>
 
+
+
+
+
         <TableRow
 
             android:layout_marginTop="35dp">
+
+
 
             <ImageView
                 android:layout_width="275dp"
                 android:layout_height="200dp"
                 android:layout_column="0"
-                android:layout_marginLeft="15dp"
+                android:layout_marginLeft="25dp"
                 android:id="@+id/parking1"
-                android:src="@drawable/bussines"
+                android:src="@drawable/parkingelsot"
                 android:text="esto es una foto" />
 
             <TextView
-                android:layout_column="1"
+
                 android:layout_marginTop="25dp"
                 android:gravity="center"
-
+                android:layout_column="1"
                 android:layout_height="wrap_content"
                 android:text="Parking el Sot"
                 android:textSize="25dp" />
 
-
-
+            <RatingBar
+                android:id="@+id/difficultyPopup"
+                style="?android:attr/ratingBarStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:isIndicator="true"
+                android:layout_marginLeft="15dp"
+                android:max="5"
+                android:numStars="5"
+                android:stepSize="0.1" />
 
         </TableRow>
 
@@ -76,12 +90,17 @@
                 android:text="Plaçes disponibles: 112"
                 android:textSize="18dp" />
 
+
+        </LinearLayout>
+
+        <LinearLayout>
             <RatingBar
                 android:id="@+id/difficultyPopup"
                 style="?android:attr/ratingBarStyleSmall"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:isIndicator="true"
+                android:layout_marginLeft="15dp"
                 android:max="5"
                 android:numStars="5"
                 android:stepSize="0.1" />
@@ -92,12 +111,7 @@
             android:layout_marginTop="25dp"
             android:background="#FF909090" />
 
-        <TextView
-            android:layout_column="1"
-            android:layout_marginTop="25dp"
-            android:gravity="center"
-            android:text="Parking Corona"
-            android:textSize="25dp" />
+
 
         <TableRow
 
@@ -108,11 +122,16 @@
                 android:layout_width="275dp"
                 android:layout_height="200dp"
                 android:layout_column="0"
-                android:layout_marginLeft="15dp"
-                android:src="@drawable/bussines"
+                android:layout_marginLeft="25dp"
+                android:src="@drawable/parkingcorona"
                 android:text="Aixo es el mapa del parking" />
 
-
+            <TextView
+                android:layout_column="1"
+                android:layout_marginTop="25dp"
+                android:gravity="center"
+                android:text="Parking Corona"
+                android:textSize="25dp" />
 
 
         </TableRow>
@@ -146,12 +165,7 @@
             android:layout_marginTop="40dp"
             android:background="#FF909090" />
 
-        <TextView
-            android:layout_column="1"
-            android:layout_marginTop="25dp"
-            android:gravity="center"
-            android:text="Parking Granollers"
-            android:textSize="25dp" />
+
 
         <TableRow
 
@@ -161,11 +175,17 @@
                 android:layout_width="275dp"
                 android:layout_height="200dp"
                 android:layout_column="0"
-                android:layout_marginLeft="15dp"
+                android:layout_marginLeft="25dp"
                 android:id="@+id/parking3"
                 android:src="@drawable/parkinggranollers"
                 android:text="esto es una foto" />
 
+            <TextView
+                android:layout_column="1"
+                android:layout_marginTop="25dp"
+                android:gravity="center"
+                android:text="Parking Granollers"
+                android:textSize="25dp" />
 
 
 
