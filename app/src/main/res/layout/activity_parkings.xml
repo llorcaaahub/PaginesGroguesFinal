@@ -31,10 +31,11 @@
             android:layout_marginTop="35dp">
 
             <ImageView
-                android:layout_width="200dp"
+                android:layout_width="275dp"
                 android:layout_height="200dp"
                 android:layout_column="0"
                 android:layout_marginLeft="15dp"
+                android:id="@+id/parking1"
                 android:src="@drawable/bussines"
                 android:text="esto es una foto" />
 
@@ -42,8 +43,12 @@
                 android:layout_column="1"
                 android:layout_marginTop="25dp"
                 android:gravity="center"
+
+                android:layout_height="wrap_content"
                 android:text="Parking el Sot"
                 android:textSize="25dp" />
+
+
 
 
         </TableRow>
@@ -70,31 +75,44 @@
 
                 android:text="Plaçes disponibles: 112"
                 android:textSize="18dp" />
+
+            <RatingBar
+                android:id="@+id/difficultyPopup"
+                style="?android:attr/ratingBarStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:isIndicator="true"
+                android:max="5"
+                android:numStars="5"
+                android:stepSize="0.1" />
         </LinearLayout>
 
         <View
             android:layout_height="1dp"
-            android:layout_marginTop="40dp"
+            android:layout_marginTop="25dp"
             android:background="#FF909090" />
+
+        <TextView
+            android:layout_column="1"
+            android:layout_marginTop="25dp"
+            android:gravity="center"
+            android:text="Parking Corona"
+            android:textSize="25dp" />
 
         <TableRow
 
-            android:layout_marginTop="40dp">
+            android:layout_marginTop="25dp">
 
             <ImageView
-                android:layout_width="200dp"
+                android:id="@+id/parking2"
+                android:layout_width="275dp"
                 android:layout_height="200dp"
                 android:layout_column="0"
                 android:layout_marginLeft="15dp"
                 android:src="@drawable/bussines"
                 android:text="Aixo es el mapa del parking" />
 
-            <TextView
-                android:layout_column="1"
-                android:layout_marginTop="25dp"
-                android:gravity="center"
-                android:text="Parking Corona"
-                android:textSize="25dp" />
+
 
 
         </TableRow>
@@ -128,24 +146,27 @@
             android:layout_marginTop="40dp"
             android:background="#FF909090" />
 
+        <TextView
+            android:layout_column="1"
+            android:layout_marginTop="25dp"
+            android:gravity="center"
+            android:text="Parking Granollers"
+            android:textSize="25dp" />
+
         <TableRow
 
-            android:layout_marginTop="40dp">
+            android:layout_marginTop="25dp">
 
             <ImageView
-                android:layout_width="200dp"
+                android:layout_width="275dp"
                 android:layout_height="200dp"
                 android:layout_column="0"
                 android:layout_marginLeft="15dp"
+                android:id="@+id/parking3"
                 android:src="@drawable/parkinggranollers"
                 android:text="esto es una foto" />
 
-            <TextView
-                android:layout_column="1"
-                android:layout_marginTop="25dp"
-                android:gravity="center"
-                android:text="Parking Granollers"
-                android:textSize="25dp" />
+
 
 
         </TableRow>

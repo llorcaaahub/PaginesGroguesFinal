@@ -32,7 +32,6 @@ public class MainActivity extends AppCompatActivity {
             @Override
             //Aquest es el boto de restaurants
             public void onClick(View view) {
-
                 goToEventsRestaurants(view);
             }
         });
