@@ -6,7 +6,8 @@
 
     <TableLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
+
         android:stretchColumns="1">
         <LinearLayout
             android:id="@+id/l1"
@@ -16,94 +17,120 @@
             android:layout_marginTop="30dp">
 
             <TextView
+                android:textStyle="bold"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:gravity="center"
                 android:layout_marginLeft="10dp"
                 android:text="@string/parkings"
-                android:textSize="25dp" />
+                android:textSize="40dp" />
+
+
 
 
         </LinearLayout>
 
+        <View
+            android:layout_height="1dp"
+            android:layout_marginTop="25dp"
+            android:background="#FF909090" />
 
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center">
 
+            <TextView
 
-
-        <TableRow
-
-            android:layout_marginTop="35dp">
-
-
+                android:id="@+id/titolparking1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:text="Parking el Sot"
+                android:textSize="25dp" />
 
             <ImageView
-                android:layout_width="275dp"
-                android:layout_height="200dp"
+                android:id="@+id/primeraestrella1"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_toRightOf="@id/titolparking1"
+                android:src="@drawable/estrellacompleta" />
+
+            <ImageView
+                android:id="@+id/segonaestrella1"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="10dp"
+                android:layout_toRightOf="@id/primeraestrella1"
+                android:src="@drawable/estrellacompleta" />
+
+            <ImageView
+                android:id="@+id/terceraestrella1"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="10dp"
+                android:layout_toRightOf="@id/segonaestrella1"
+                android:src="@drawable/estrellacompleta" />
+
+            <ImageView
+                android:id="@+id/quartaestrella1"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="10dp"
+                android:layout_toRightOf="@id/terceraestrella1"
+                android:src="@drawable/estrellamitja" />
+
+            <ImageView
+                android:id="@+id/cinquenaestrella1"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="10dp"
+                android:layout_toRightOf="@id/quartaestrella1"
+                android:src="@drawable/estrellabuida" />
+
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_marginTop="15dp"
+            android:gravity="center">
+            <ImageView
+                android:layout_width="400dp"
+                android:layout_height="250dp"
                 android:layout_column="0"
                 android:layout_marginLeft="25dp"
                 android:id="@+id/parking1"
                 android:src="@drawable/parkingelsot"
                 android:text="esto es una foto" />
 
-            <TextView
-
-                android:layout_marginTop="25dp"
-                android:gravity="center"
-                android:layout_column="1"
-                android:layout_height="wrap_content"
-                android:text="Parking el Sot"
-                android:textSize="25dp" />
-
-            <RatingBar
-                android:id="@+id/difficultyPopup"
-                style="?android:attr/ratingBarStyle"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:isIndicator="true"
-                android:layout_marginLeft="15dp"
-                android:max="5"
-                android:numStars="5"
-                android:stepSize="0.1" />
-
-        </TableRow>
+        </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
             <TextView
-                android:layout_marginLeft="15dp"
-                android:layout_width="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Plaçes totals: 257"
-                android:textSize="18dp" />
+                android:text="Places totals: 257"
+                android:textSize="18dp"
+                android:gravity="center" />
 
         </LinearLayout>
 
         <LinearLayout>
 
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="15dp"
-
-                android:text="Plaçes disponibles: 112"
+                android:gravity="center"
+                android:text="Places disponibles: 112"
                 android:textSize="18dp" />
-
-
-        </LinearLayout>
-
-        <LinearLayout>
-            <RatingBar
-                android:id="@+id/difficultyPopup"
-                style="?android:attr/ratingBarStyleSmall"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:isIndicator="true"
-                android:layout_marginLeft="15dp"
-                android:max="5"
-                android:numStars="5"
-                android:stepSize="0.1" />
         </LinearLayout>
 
         <View

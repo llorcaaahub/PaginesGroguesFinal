@@ -7,12 +7,12 @@
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@mipmap/logo_paginesgrogues_round"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@mipmap/logo_paginesgrogues_round"
         android:screenOrientation="portrait"
         android:supportsRtl="true"
-        android:theme="@style/Theme.PaginesGrogues"
+        android:theme="@style/Theme.PaginesGrogues.NoActionBar"
         tools:targetApi="31">
         <activity
             android:name=".MoviesActivity"

@@ -70,6 +70,9 @@ public class RestaurantsActivity extends AppCompatActivity {
             @Override
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
                 //Cada cop que el index de spinner canvia, entrara aqui dins
+
+
+                //Aqui es a on JO faig el actualitzar les dades
                 loadJSONFromAsset();
             }
             @Override
