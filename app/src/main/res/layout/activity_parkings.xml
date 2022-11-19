@@ -13,7 +13,6 @@
             android:id="@+id/l1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-
             android:layout_marginTop="30dp">
 
             <TextView
@@ -94,6 +93,8 @@
 
         </RelativeLayout>
 
+
+
         <LinearLayout
             android:layout_marginTop="15dp"
             android:gravity="center">
@@ -129,8 +130,37 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="15dp"
                 android:gravity="center"
-                android:text="Places disponibles: 112"
+                android:id="@+id/placesparking1"
+                android:text="@string/omplirplaces"
                 android:textSize="18dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:gravity="center"
+            android:id="@+id/parkingtelefon1">
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/logotelefon"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="25dp"
+                android:text="987 987 432"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:gravity="center"
+            android:id="@+id/parkingpaginaweb1">
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/logointernet"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="25dp"
+                android:text="parkingelsot.com"/>
         </LinearLayout>
 
         <View
@@ -138,34 +168,90 @@
             android:layout_marginTop="25dp"
             android:background="#FF909090" />
 
-
-
-        <TableRow
-
-            android:layout_marginTop="25dp">
-
-            <ImageView
-                android:id="@+id/parking2"
-                android:layout_width="275dp"
-                android:layout_height="200dp"
-                android:layout_column="0"
-                android:layout_marginLeft="25dp"
-                android:src="@drawable/parkingcorona"
-                android:text="Aixo es el mapa del parking" />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center">
 
             <TextView
-                android:layout_column="1"
-                android:layout_marginTop="25dp"
+
+                android:id="@+id/titolparking2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
                 android:gravity="center"
                 android:text="Parking Corona"
                 android:textSize="25dp" />
 
+            <ImageView
+                android:id="@+id/primeraestrella2"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_toRightOf="@id/titolparking2"
+                android:src="@drawable/estrellacompleta" />
 
-        </TableRow>
+            <ImageView
+                android:id="@+id/segonaestrella2"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="10dp"
+                android:layout_toRightOf="@id/primeraestrella2"
+                android:src="@drawable/estrellacompleta" />
+
+            <ImageView
+                android:id="@+id/terceraestrella2"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="10dp"
+                android:layout_toRightOf="@id/segonaestrella2"
+                android:src="@drawable/estrellacompleta" />
+
+            <ImageView
+                android:id="@+id/quartaestrella2"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="10dp"
+                android:layout_toRightOf="@id/terceraestrella2"
+                android:src="@drawable/estrellacompleta" />
+
+            <ImageView
+                android:id="@+id/cinquenaestrella2"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="10dp"
+                android:layout_toRightOf="@id/quartaestrella2"
+                android:src="@drawable/estrellabuida" />
+
+
+        </RelativeLayout>
+
+
+
+        <LinearLayout
+
+            android:layout_marginTop="15dp"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/parking2"
+                android:layout_width="400dp"
+                android:layout_height="250dp"
+                android:layout_column="0"
+                android:layout_marginLeft="25dp"
+
+                android:src="@drawable/parkingcorona"
+                android:text="Aixo es el mapa del parking" />
+
+
+
+        </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:gravity="center">
 
             <TextView
 
@@ -176,43 +262,128 @@
                 android:textSize="18dp" />
         </LinearLayout>
 
-        <LinearLayout>
+        <LinearLayout
+            android:gravity="center">
 
             <TextView
 
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="15dp"
-                android:text="Plaçes disponibles: 165"
+                android:id="@+id/placesparking2"
+                android:text="@string/omplirplaces"
                 android:textSize="18dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:gravity="center"
+            android:id="@+id/parkingtelefon2">
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/logotelefon"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="25dp"
+                android:text="937 416 223"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:gravity="center"
+            android:id="@+id/parkingpaginaweb2">
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/logointernet"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="25dp"
+                android:text="parkingcorona.com"/>
         </LinearLayout>
 
         <View
             android:layout_height="1dp"
-            android:layout_marginTop="40dp"
+            android:layout_marginTop="25dp"
             android:background="#FF909090" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center">
+
+            <TextView
+
+                android:id="@+id/titolparking3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:text="Parking Granollers"
+                android:textSize="25dp" />
+
+            <ImageView
+                android:id="@+id/primeraestrella3"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_toRightOf="@id/titolparking3"
+                android:src="@drawable/estrellacompleta" />
+
+            <ImageView
+                android:id="@+id/segonaestrella3"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="10dp"
+                android:layout_toRightOf="@id/primeraestrella3"
+                android:src="@drawable/estrellacompleta" />
+
+            <ImageView
+                android:id="@+id/terceraestrella3"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="10dp"
+                android:layout_toRightOf="@id/segonaestrella3"
+                android:src="@drawable/estrellacompleta" />
+
+            <ImageView
+                android:id="@+id/quartaestrella3"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="10dp"
+                android:layout_toRightOf="@id/terceraestrella3"
+                android:src="@drawable/estrellabuida" />
+
+            <ImageView
+                android:id="@+id/cinquenaestrella3"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="10dp"
+                android:layout_toRightOf="@id/quartaestrella3"
+                android:src="@drawable/estrellabuida" />
+
+
+        </RelativeLayout>
 
 
 
         <TableRow
 
-            android:layout_marginTop="25dp">
+            android:layout_marginTop="15dp"
+            android:gravity="center">
 
             <ImageView
-                android:layout_width="275dp"
-                android:layout_height="200dp"
+                android:layout_width="400dp"
+                android:layout_height="250dp"
                 android:layout_column="0"
                 android:layout_marginLeft="25dp"
                 android:id="@+id/parking3"
                 android:src="@drawable/parkinggranollers"
-                android:text="esto es una foto" />
+                />
 
-            <TextView
-                android:layout_column="1"
-                android:layout_marginTop="25dp"
-                android:gravity="center"
-                android:text="Parking Granollers"
-                android:textSize="25dp" />
+
 
 
 
@@ -220,7 +391,8 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:gravity="center">
 
             <TextView
 
@@ -231,14 +403,44 @@
                 android:textSize="18dp" />
         </LinearLayout>
 
-        <LinearLayout>
+        <LinearLayout
+            android:gravity="center">
 
             <TextView
-                android:layout_marginLeft="10dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Plaçes disponibles: 30"
+                android:layout_marginLeft="10dp"
+                android:id="@+id/placesparking3"
+                android:text="@string/omplirplaces"
                 android:textSize="18dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:gravity="center"
+            android:id="@+id/parkingtelefon3">
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/logotelefon"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="25dp"
+                android:text="938 704 272"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:gravity="center"
+            android:id="@+id/parkingpaginaweb3">
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/logointernet"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="25dp"
+                android:text="parkinggranollers.com"/>
         </LinearLayout>
 
         <View
