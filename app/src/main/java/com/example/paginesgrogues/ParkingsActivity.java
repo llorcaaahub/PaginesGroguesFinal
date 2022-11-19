@@ -24,18 +24,14 @@ public class ParkingsActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_parkings);
 
-        //Donem valor al primer mapa de parking
+        //Donem valor als tres mapes del parking
         parking1 = findViewById(R.id.parking1);
-        //Donem valor al segon mapa de parking
         parking2 = findViewById(R.id.parking2);
-        //Donem valor al tercer mapa de parking
         parking3 = findViewById(R.id.parking3);
 
-        //Donem valor al primer numero de places de parking
+        //Donem valor a les tres places de parking restants
         placesparking1 = findViewById(R.id.placesparking1);
-        //Donem valor al segon numero de places de parking
         placesparking2 = findViewById(R.id.placesparking2);
-        //Donem valor al tercer numero de places de parking
         placesparking3 = findViewById(R.id.placesparking3);
 
         //Aqui donarem valor als tres links de les pagines web
@@ -50,24 +46,22 @@ public class ParkingsActivity extends AppCompatActivity {
 
         //Aqui afegim els events de les pagines web
         afegireventspaginesweb();
+
         //Aqui afegim els events dels telefons
         afegireventstelefons();
-
 
         //Aquest funcio es la que fem quan volem posar un numero random de places de parking per cada parking
         valorsrandomspplacesparking();
 
         //Aqui crearem les tres funcion per obrir el mapa
         afegireventsmapes();
-
-
     }
 
     private void afegireventsmapes() {
-        parking3.setOnClickListener(new View.OnClickListener() {
+        parking1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Uri gmmIntentUri = Uri.parse("geo:41.6142789,2.2871648?z=21");
+                Uri gmmIntentUri = Uri.parse("geo:41.6079283,2.2904078?z=21");
                 Intent mapIntent = new Intent(Intent.ACTION_VIEW, gmmIntentUri);
                 mapIntent.setPackage("com.google.android.apps.maps");
                 if (mapIntent.resolveActivity(getPackageManager()) != null) {
@@ -75,7 +69,6 @@ public class ParkingsActivity extends AppCompatActivity {
                 }
             }
         });
-
         parking2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -87,11 +80,10 @@ public class ParkingsActivity extends AppCompatActivity {
                 }
             }
         });
-
-        parking1.setOnClickListener(new View.OnClickListener() {
+        parking3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Uri gmmIntentUri = Uri.parse("geo:41.6079283,2.2904078?z=21");
+                Uri gmmIntentUri = Uri.parse("geo:41.6142789,2.2871648?z=21");
                 Intent mapIntent = new Intent(Intent.ACTION_VIEW, gmmIntentUri);
                 mapIntent.setPackage("com.google.android.apps.maps");
                 if (mapIntent.resolveActivity(getPackageManager()) != null) {
