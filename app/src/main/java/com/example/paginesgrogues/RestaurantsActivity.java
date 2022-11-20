@@ -135,7 +135,7 @@ public class RestaurantsActivity extends AppCompatActivity {
         r1linkpaginaweb.setText(linkpaginawebrestaurant);
         String telefonRestaurant = exemple.getJSONObject(posicio).get("telefon").toString();
         r1telefon.setText(telefonRestaurant);
-        String imatgerestaurant = exemple.getJSONObject(posicio).get("imatge").toString();
+        String imatgerestaurant = exemple.getJSONObject(posicio).get("imatge").toString(); //atarasii
         int resID = getResources().getIdentifier(imatgerestaurant , "drawable", getPackageName());
         r1imatge.setImageResource(resID);
     }

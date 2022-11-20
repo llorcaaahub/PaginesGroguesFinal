@@ -3,81 +3,81 @@
     "nomEmpresa": "AMD",
     "adre\u00e7a": "One AMD Pl, Sunnyvale, CA 94088, Estats Units",
     "linkpaginaweb": "https:\/\/www.amd.com\/es",
-    "imatge": ".\/amd.com",
+    "imatge": "amd",
     "telefon": "+14087494",
     "enlla\u00e7ubicacio": "https:\/\/goo.gl\/maps\/J97JECnEqwQCKuR79",
-    "TipusSector": "EmpresaTecnologica"
+    "TipusSector": "Empresa Tecnologica"
   },
   {
     "nomEmpresa": "Endesa",
     "adre\u00e7a": "Avinguda de Canovelles, 53, 08420 Canovelles, Barcelona",
     "linkpaginaweb": "https:\/\/www.endesa.com\/",
-    "imatge": ".\/endesa.png",
+    "imatge": "endesa",
     "telefon": "800760909",
     "enlla\u00e7ubicacio": "https:\/\/goo.gl\/maps\/sAC5h2162pTWWTAq8",
-    "TipusSector": "EmpresaElectrica"
+    "TipusSector": "Empresa Electrica"
   },
   {
     "nomEmpresa": "Factor Energia",
     "adre\u00e7a": "Carrer de Francesc Layret, 169, 08911 Badalona, Barcelona",
     "linkpaginaweb": "https:\/\/www.factorenergia.com\/es\/",
-    "imatge": ".\/factorenergia.png",
+    "imatge": "factorenergia",
     "telefon": "900649028",
     "enlla\u00e7ubicacio": "https:\/\/goo.gl\/maps\/m7FFjmQzgBrMcKwE8",
-    "TipusSector": "EmpresaElectrica"
+    "TipusSector": "Empresa Electrica"
   },
   {
     "nomEmpresa": "Iberdola",
     "adre\u00e7a": "Carrer Miquel Ricom\u00e0, 35, 08402 Granollers, Barcelona",
     "linkpaginaweb": "https:\/\/www.iberdrola.es\/",
-    "imatge": ".\/iberdrola.png",
+    "imatge": "iberdrola",
     "telefon": "938794243",
     "enlla\u00e7ubicacio": "https:\/\/goo.gl\/maps\/nYHAoKgqxSWrgEa49",
-    "TipusSector": "EmpresaElectrica"
+    "TipusSector": "Empresa Electrica"
   },
   {
     "nomEmpresa": "Intel",
     "adre\u00e7a": "2200 Mission College Blvd, Santa Clara, CA 95054, Estats Units",
     "linkpaginaweb": "http:\/\/www.intel.com\/content\/www\/us\/en\/homepage.html",
-    "imatge": ".\/intel.png",
+    "imatge": "intel",
     "telefon": "+14087658",
     "enlla\u00e7ubicacio": "https:\/\/goo.gl\/maps\/1YFeHiuPAHiKpsRy7",
-    "TipusSector": "EmpresaTecnologica"
+    "TipusSector": "Empresa Tecnologica"
   },
   {
     "nomEmpresa": "Nvidia",
     "adre\u00e7a": "2788 San Tomas Expy, Santa Clara, CA 95051, Estats Units",
     "linkpaginaweb": "https:\/\/www.nvidia.com\/es-es\/",
-    "imatge": ".\/nvidia.png",
+    "imatge": "nvidia",
     "telefon": "+14084862",
     "enlla\u00e7ubicacio": "https:\/\/goo.gl\/maps\/ecJuN2pKp9H9jzPJ6",
-    "TipusSector": "EmpresaTecnologica"
+    "TipusSector": "Empresa Tecnologica"
   },
   {
     "nomEmpresa": "Peugeot",
     "adre\u00e7a": "C\/ de Padilla, 333, 08025 Barcelona",
     "linkpaginaweb": "https:\/\/www.peugeot.es\/",
-    "imatge": ".\/peugeot.png",
+    "imatge": "peugeot",
     "telefon": "934566300",
     "enlla\u00e7ubicacio": "https:\/\/goo.gl\/maps\/zYzZcpcjLKw6SJA97",
-    "TipusSector": "EmpresaAutomovilistica"
+    "TipusSector": "Empresa Automovilistica"
   },
   {
     "nomEmpresa": "Porsche",
     "adre\u00e7a": "C\/ de Par\u00eds, 123, 08036 Barcelona",
     "linkpaginaweb": "https:\/\/www.porsche.com\/spain\/",
-    "imatge": ".\/porsche.png",
+    "imatge": "porsche",
     "telefon": "930181300",
     "enlla\u00e7ubicacio": "https:\/\/goo.gl\/maps\/gqzuC9hJrbFHXcqJA",
-    "TipusSector": "EmpresaAutomovilistica"
+    "TipusSector": "Empresa Automovilistica"
   },
   {
     "nomEmpresa": "Seat",
     "adre\u00e7a": "Gran Via de les Corts Catalanes, 140, 08038 Barcelona",
     "linkpaginaweb": "https:\/\/www.seat.es\/",
-    "imatge": ".\/seat.png",
+    "imatge": "seat",
     "telefon": "933321100",
     "enlla\u00e7ubicacio": "https:\/\/g.page\/SEATCUPRA_CatalunyaMotor_GranVia?share",
-    "TipusSector": "EmpresaAutomovilistica"
+    "TipusSector": "Empresa Automovilistica"
   }
 ]
