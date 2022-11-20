@@ -85,7 +85,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void goToEventsMovies(View view) {
-        Intent intent = new Intent(this, MoviesActivity.class);
+        Intent intent = new Intent(this, MoviesActivity .class);
         startActivity(intent);
         //Aqui declarem la funcio que inciara els events de cada clic i li posara un nom als imageViews/Botons
 

@@ -22,7 +22,7 @@
         <item>--Tria tipus Empressa--</item>
         <item>Empresa Electrica</item>
         <item>Empresa Tecnologica</item>
-        <item>Empresa automovilistica</item>
+        <item>Empresa Automovilistica</item>
     </string-array>
 
     <string name="triar_tipus_sectors">Tipus de sectors:</string>
