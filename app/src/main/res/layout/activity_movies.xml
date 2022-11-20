@@ -169,9 +169,8 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:text="Aixo sera un exemple de la descripcio
-        del restaurant bla bla bla bla bla bla bla bla bala bla
-        bla bla bla blai bla bla bla bla bls bla bla bla bla bla"
+                android:text="Després d'una sessió d'espiritisme, Laura Villegas es comença a comportar de manera estranya. Alarmats pel sinistre comportament de la seva filla i convençuts que el dimoni l'ha posseït, els pares acudeixen al Pare Olmedo, un dels 15 exorcistes autoritzats pel Vaticà per intervenir en casos de possessions demoníaques. A partir d'aquí una sèrie de fenòmens estranys començaran a embolicar els protagonistes de la història.
+"
                 android:textSize="18dp" />
 
 

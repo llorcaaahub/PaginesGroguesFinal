@@ -49,12 +49,11 @@
                 android:layout_height="120dp"
                 android:layout_column="0"
                 android:layout_marginLeft="15dp"
-                android:src="@drawable/"
+                android:src="@drawable/bussines"
                 android:text="esto es una foto" />
 
             <TextView
                 android:id="@+id/e1nomempresa"
-
                 android:layout_column="1"
                 android:layout_marginTop="25dp"
                 android:gravity="center"
@@ -71,9 +70,9 @@
 
             <TextView
 
+                android:id="@+id/e1adreça"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/e1descripcio"
                 android:text="Aixo sera un exemple de la descripcio
         del restaurant bla bla bla bla bla bla bla bla bala bla
         bla bla bla blai bla bla bla bla bls bla bla bla bla bla"
@@ -86,13 +85,14 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="15dp"
+                android:id="@+id/e1telefon"
                 android:text="info del telefono i aquestes coses klkk"
                 android:textSize="18dp" />
 
         </LinearLayout>
         <LinearLayout>
             <TextView
-                android:id="@+id/e1telefon"
+                android:id="@+id/e1link"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="15dp"
@@ -137,7 +137,7 @@
             android:layout_marginTop="15dp">
 
             <TextView
-                android:id="@+id/e2descripcio"
+                android:id="@+id/e2adreça"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Aixo sera un exemple de la descripcio
@@ -152,12 +152,13 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="15dp"
+                android:id="@+id/e2telefon"
                 android:text="info del telefono i aquestes coses klkk"
                 android:textSize="18dp" />
         </LinearLayout>
         <LinearLayout>
             <TextView
-                android:id="@+id/e2telefon"
+                android:id="@+id/e2link"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="15dp"
@@ -204,7 +205,7 @@
 
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/e3descripcio"
+                android:id="@+id/e3adreça"
                 android:text="Aixo sera un exemple de la descripcio
         del restaurant bla bla bla bla bla bla bla bla bala bla
         bla bla bla blai bla bla bla bla bls bla bla bla bla bla"
@@ -219,12 +220,13 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="15dp"
+                android:id="@+id/e3telefon"
                 android:text="info del telefono i aquestes coses klkk"
                 android:textSize="18dp" />
         </LinearLayout>
         <LinearLayout>
             <TextView
-                android:id="@+id/e3telefon"
+                android:id="@+id/e3link"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="15dp"

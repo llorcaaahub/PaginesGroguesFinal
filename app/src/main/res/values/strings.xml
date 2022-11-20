@@ -19,7 +19,6 @@
     <string name="triar_tipus_restaurants">Tipus de restaurants:</string>
 
     <string-array name="tipus_de_bussines">
-        <item>--Tria tipus Empressa--</item>
         <item>Empresa Electrica</item>
         <item>Empresa Tecnologica</item>
         <item>Empresa Automovilistica</item>
