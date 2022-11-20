@@ -44,11 +44,12 @@
             android:layout_marginTop="40dp">
 
             <ImageView
+                android:id="@+id/e1imatge"
                 android:layout_width="170dp"
                 android:layout_height="120dp"
                 android:layout_column="0"
                 android:layout_marginLeft="15dp"
-                android:src="@drawable/bussines"
+                android:src="@drawable/"
                 android:text="esto es una foto" />
 
             <TextView
@@ -111,6 +112,7 @@
             android:layout_marginTop="40dp">
 
             <ImageView
+                android:id="@+id/e2imatge"
                 android:layout_width="170dp"
                 android:layout_height="120dp"
                 android:layout_column="0"
@@ -174,6 +176,7 @@
             android:layout_marginTop="40dp">
 
             <ImageView
+                android:id="@+id/e3imatge"
                 android:layout_width="170dp"
                 android:layout_height="120dp"
                 android:layout_column="0"

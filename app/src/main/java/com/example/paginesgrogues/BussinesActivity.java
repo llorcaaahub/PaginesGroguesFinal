@@ -1,6 +1,8 @@
 package com.example.paginesgrogues;
 
 import android.os.Bundle;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.Spinner;
@@ -26,7 +28,7 @@ public class BussinesActivity extends AppCompatActivity {
     //Aqui estem declarant els tres telefons dels restaurants
     TextView e1telefon, e2telefon, e3telefon;
     //Aqui estem declarant les tres imatges dels restaurants
-    ImageView r1imatge, r2imatge, r3imatge;
+    ImageView e1imatge, e2imatge, e3imatge;
     Spinner sp;
 
     Spinner spinnerBussines;
@@ -42,104 +44,109 @@ public class BussinesActivity extends AppCompatActivity {
         sp= findViewById(R.id.spinner_tipus_bussines);
 
 
-        spinnerBussines= (Spinner) findViewById(R.id.spinner_tipus_bussines);
-        // Create an ArrayAdapter using the string array and a default spinner layout
+        //Aqui li diem que el spinner que hem creat abans es el spinner que esta al xml
+        spinnerBussines = (Spinner) findViewById(R.id.spinner_tipus_bussines);
+        //Aqui li posem valor al spinner, a aixi tindrem la llista de desplegables de restaurants
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.tipus_de_bussines, android.R.layout.simple_spinner_item);
-        // Specify the layout to use when the list of choices appears
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        // Apply the adapter to the spinner
         spinnerBussines.setAdapter(adapter);
-        loadJSONFromAsset();
 
-
-
+        spinnerBussines.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                //Cada cop que el index de spinner canvia, entrara aqui dins
+                loadJSONFromAsset();
+            }
+            @Override
+            public void onNothingSelected(AdapterView<?> parentView) {
+                // Aqui de moment no posarem res
+                //UPDATE: SI NO POSEM RES EL ADAPTERVIEW ES QUEIXA
+            }
+        });
     }
 
     public void loadJSONFromAsset() {
-        String json = null;
-        JSONArray exemple = null;
-
-
+        JSONArray exemple;
         try {
-            BufferedReader reader = new BufferedReader(new InputStreamReader(getAssets().open("restaurants.json")));
+            BufferedReader reader = new BufferedReader(new InputStreamReader(getAssets().open("bussines.json")));
 
-
-            // do reading, usually loop until end of file reading
             StringBuilder sb = new StringBuilder();
             String mLine;
-            while ((mLine= reader.readLine()) != null) {
+            while ((mLine = reader.readLine()) != null) {
                 //process line
                 sb.append(mLine);
-
-
             }
+
             exemple = new JSONArray(sb.toString());
-            String nomimatge;
-            if(spinnerBussines.getSelectedItem().toString().equals("--Tria tipus Empressa--")){
-                int contador = 1;
-                for(int i=0;i<exemple.length();i++){
-
-                    if(exemple.getJSONObject(i).get("tipurestaurant").equals("MenjarRapid")){
-                        switch(contador){
-                            case 1:
-                                e1nomempresa.setText((CharSequence) exemple.getJSONObject(i).get("nomRestaurant").toString());
-                                e1descripcio.setText((CharSequence) exemple.getJSONObject(i).get("descripcio").toString());
-                                e1linkpaginaweb.setText((CharSequence) exemple.getJSONObject(i).get("linkpaginaweb").toString());
-                                e1telefon.setText((CharSequence) exemple.getJSONObject(i).get("telefon").toString());
-
-                                switch (exemple.getJSONObject(i).get("imatge").toString()){
-                                    case "./kfc":r1imatge.setImageResource(R.drawable.kfc);break;
-                                    case "./viena":r1imatge.setImageResource(R.drawable.viena);break;
-                                    case "./mcdonalds":r1imatge.setImageResource(R.drawable.mcdonalds);break;
-                                    default: break;
-                                }
-                                contador++;
-                                break;
-                            case 2:
-                                e2nomempresa.setText((CharSequence) exemple.getJSONObject(i).get("nomRestaurant").toString());
-                                e2descripcio.setText((CharSequence) exemple.getJSONObject(i).get("descripcio").toString());
-                                e2linkpaginaweb.setText((CharSequence) exemple.getJSONObject(i).get("linkpaginaweb").toString());
-                                e2telefon.setText((CharSequence) exemple.getJSONObject(i).get("telefon").toString());
-                                switch (exemple.getJSONObject(i).get("imatge").toString()){
-                                    case "./kfc":r2imatge.setImageResource(R.drawable.kfc);break;
-                                    case "./viena":r2imatge.setImageResource(R.drawable.viena);break;
-                                    case "./mcdonalds":r2imatge.setImageResource(R.drawable.mcdonalds);break;
-                                    default: break;
-                                }
-
-                                contador++;
-                                break;
-                            case 3:
-                                e3nomempresa.setText((CharSequence) exemple.getJSONObject(i).get("nomRestaurant").toString());
-                                e3descripcio.setText((CharSequence) exemple.getJSONObject(i).get("descripcio").toString());
-                                e3linkpaginaweb.setText((CharSequence) exemple.getJSONObject(i).get("linkpaginaweb").toString());
-                                e3telefon.setText((CharSequence) exemple.getJSONObject(i).get("telefon").toString());
-                                nomimatge = exemple.getJSONObject(i).get("imatge").toString();
-                                switch (nomimatge){
-                                    case "./kfc":r3imatge.setImageResource(R.drawable.kfc);break;
-                                    case "./viena":r3imatge.setImageResource(R.drawable.viena);break;
-                                    case "./mcdonalds":r3imatge.setImageResource(R.drawable.mcdonalds);break;
-                                    default: break;
-                                }
-                                contador++;
-                                break;
-                            default: break;
-                        }
-                    }
-                    //Aqui posarem el codi que fem servir
-                }
-
+            String tipusbussinesatriar;
+            tipusbussinesatriar = spinnerBussines.getSelectedItem().toString();
+            if(!tipusbussinesatriar.equals("triar_tipus_sectors")){
+                omplirvalors(exemple,tipusbussinesatriar);
+            }else{
+                //Aqui podriem fer que si no te cap restaurant triat no es mostri res
+                //contentView.setVisibility(View.GONE) //MAYBE ES AIXO
             }
-
-
-
         } catch (IOException | JSONException e) {
             //log the exception
-
         }
+    }
+    private void omplirvalors(JSONArray exemple, String tipusbussinesatriar) throws JSONException {
+        int contador = 1;
+        for (int i = 0; i < exemple.length(); i++) {
+            //if(exemple.getJSONObject(i).get("tipusbussines").equals(tipusbussinesatriar)){
+            if(exemple.getJSONObject(i).get("tipusbussines").toString().equals(tipusbussinesatriar)){ //Aqui es a on haurem de posar el if de comparar
+                //Aqui tindrem el codi de afegir tots els valors al seu lloc corresponent directament
+                switch (contador){
+                    case 1: afegirprimerbussines(exemple,i);break;//Aqui afegirem al primer negoci
+                    case 2: afegirsegonbussines(exemple,i);break;//Aqui afegirem al segon negoci
+                    case 3: afegirtercerbussines(exemple,i);break;//Aqui afegirem al tercer negoci
+                    default: break;
+                }
+                contador++;
+            }
+        }
+    }
 
+    private void afegirprimerbussines(JSONArray exemple, int posicio) throws JSONException {
+        String nomEmpresa = exemple.getJSONObject(posicio).get("nomEmpresa").toString();
+        e1nomempresa.setText(nomEmpresa);
+        String descripcioEmpresa = exemple.getJSONObject(posicio).get("descripcio").toString();
+        e1descripcio.setText(descripcioEmpresa);
+        String linkpaginawebempresa = exemple.getJSONObject(posicio).get("linkpaginaweb").toString();
+        e1linkpaginaweb.setText(linkpaginawebempresa);
+        String telefonEmpresa = exemple.getJSONObject(posicio).get("telefon").toString();
+        e1telefon.setText(telefonEmpresa);
+        String imatgeEmpresa = exemple.getJSONObject(posicio).get("imatge").toString();
+        int resID = getResources().getIdentifier(imatgeEmpresa , "drawable", getPackageName());
+        e1imatge.setImageResource(resID);
+    }
 
-        String paraula = "Exemple";
+    private void afegirsegonbussines(JSONArray exemple, int posicio) throws JSONException {
+        String nomEmpresa = exemple.getJSONObject(posicio).get("nomEmpresa").toString();
+        e2nomempresa.setText(nomEmpresa);
+        String descripcioEmpresa = exemple.getJSONObject(posicio).get("descripcio").toString();
+        e2descripcio.setText(descripcioEmpresa);
+        String linkpaginawebempresa= exemple.getJSONObject(posicio).get("linkpaginaweb").toString();
+        e2linkpaginaweb.setText(linkpaginawebempresa);
+        String telefonEmpresa = exemple.getJSONObject(posicio).get("telefon").toString();
+        e2telefon.setText(telefonEmpresa);
+        String imatgeEmpresa = exemple.getJSONObject(posicio).get("imatge").toString();
+        int resID = getResources().getIdentifier(imatgeEmpresa , "drawable", getPackageName());
+        e2imatge.setImageResource(resID);
+    }
+
+    private void afegirtercerbussines(JSONArray exemple, int posicio) throws JSONException {
+        String nomEmpresa = exemple.getJSONObject(posicio).get("nomEmpresa").toString();
+        e3nomempresa.setText(nomEmpresa);
+        String descripcioEmpresa = exemple.getJSONObject(posicio).get("descripcio").toString();
+        e3descripcio.setText(descripcioEmpresa);
+        String linkpaginawebempresa = exemple.getJSONObject(posicio).get("linkpaginaweb").toString();
+        e3linkpaginaweb.setText(linkpaginawebempresa);
+        String telefonEmpresa = exemple.getJSONObject(posicio).get("telefon").toString();
+        e3telefon.setText(telefonEmpresa);
+        String imatgeEmpresa = exemple.getJSONObject(posicio).get("imatge").toString();
+        int resID = getResources().getIdentifier(imatgeEmpresa , "drawable", getPackageName());
+        e3imatge.setImageResource(resID);
     }
 
 }
